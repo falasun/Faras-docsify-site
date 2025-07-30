@@ -1,7 +1,7 @@
 
 # GitHub Actions CI 配置文件
 # 用于自动化构建和部署 Docsify 文档站
-name: Markdown Lint Check
+name: Markdown Lint and Format
 
 on:
   push:
@@ -10,13 +10,42 @@ on:
     branches: [ "main" ]
 
 jobs:
-  lint-markdown:
+  lint-and-format:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: |
+          npm install --global prettier
+          npm install --global markdownlint-cli
+
+      - name: Format Markdown files
+        run: |
+          prettier --write "docs/**/*.md"
 
       - name: Run markdownlint
-        uses: nosborn/github-action-markdown-cli@v3
+        run: |
+          markdownlint docs --fix
+
+      - name: Commit formatted files
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add -A
+          git diff --staged --quiet || git commit -m "Auto-format Markdown files [skip ci]"
+
+      - name: Push changes
+        uses: ad-m/github-push-action@master
         with:
-          files: docs
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: ${{ github.ref }}
