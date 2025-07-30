@@ -1,4 +1,4 @@
-# About this project      
+# 本项目概况     
 
 > As a product manager role, practicing the full CI/CD process by managing md format documents with Git and integrating static website publishing.  
 
@@ -33,35 +33,7 @@
 > As a product manager role, practicing the full CI/CD process by managing md format documents with Git and integrating static website publishing.  
 
 
-> As a product manager role, practicing the full CI/CD process by managing md format documents with Git and integrating static website publishing.  
-
-
-> As a product manager role, practicing the full CI/CD process by managing md format documents with Git and integrating static website publishing.  
-
-
-> As a product manager role, practicing the full CI/CD process by managing md format documents with Git and integrating static website publishing.  
-
-
-> As a product manager role, practicing the full CI/CD process by managing md format documents with Git and integrating static website publishing.  
-
-
-> As a product manager role, practicing the full CI/CD process by managing md format documents with Git and integrating static website publishing.  
-
-
-> As a product manager role, practicing the full CI/CD process by managing md format documents with Git and integrating static website publishing.  
-
-
-> As a product manager role, practicing the full CI/CD process by managing md format documents with Git and integrating static website publishing.  
-
-
-> As a product manager role, practicing the full CI/CD process by managing md format documents with Git and integrating static website publishing.  
-
-
-> As a product manager role, practicing the full CI/CD process by managing md format documents with Git and integrating static website publishing.  
-
-
-> As a product manager role, practicing the full CI/CD process by managing md format documents with Git and integrating static website publishing.  
-
+> ……
 
 
 # 快速开始
