@@ -1,4 +1,3 @@
-
 # GitHub Actions CI 配置文件
 # 用于自动化构建和部署 Docsify 文档站
 name: Markdown Lint and Format
@@ -26,16 +25,11 @@ jobs:
 
       - name: Install dependencies
         run: |
-          npm install --global prettier
           npm install --global markdownlint-cli
-
-      - name: Format Markdown files
-        run: |
-          prettier --write "docs/**/*.md"
 
       - name: Run markdownlint
         run: |
-          markdownlint docs --fix
+          npx markdownlint docs --fix
 
       - name: Commit formatted files
         run: |
