@@ -1,5 +1,3 @@
-# GitHub Actions CI 配置文件
-# 用于自动化构建和部署 Docsify 文档站
 name: Markdown Lint Only
 
 on:
@@ -11,6 +9,9 @@ on:
 jobs:
   lint-only:
     runs-on: ubuntu-latest
+    # 添加这一行：即使此 job 失败，整个 workflow 也会被标记为成功（如果有其他 job 且其他 job 成功）。
+    # 或者如果这是唯一的 job，它仍会被标记为失败，但 Annotations 会保留。
+    continue-on-error: true 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -30,5 +31,6 @@ jobs:
       - name: Run markdownlint
         run: |
           echo "🔍 Running markdownlint check..."
-          npx markdownlint docs --config .markdownlint.json || true
+          # 移除 || true
+          npx markdownlint docs --config .markdownlint.json 
           echo "✅ Lint check completed"
