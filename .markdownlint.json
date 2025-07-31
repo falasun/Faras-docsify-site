@@ -1,13 +1,9 @@
 
 {
-  "default": true,
-  "MD013": {
-    "line_length": 100,
-    "code_blocks": false,
-    "tables": false
+  "default": false,
+  "MD001": true,
+  "MD003": {
+    "style": "atx"
   },
-  "MD033": false,
-  "MD041": false,
-  "MD025": false,
-  "MD024": false
+  "MD009": true
 }
