@@ -11,7 +11,8 @@ jobs:
     runs-on: ubuntu-latest
     # 添加这一行：即使此 job 失败，整个 workflow 也会被标记为成功（如果有其他 job 且其他 job 成功）。
     # 或者如果这是唯一的 job，它仍会被标记为失败，但 Annotations 会保留。
-    continue-on-error: true 
+   # 这行会让列表中始终是绿色X，故而需要注释掉
+   # continue-on-error: true 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4

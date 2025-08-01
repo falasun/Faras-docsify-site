@@ -1,7 +1,8 @@
 # 本项目概况
 
 > git pages：https://falasun.github.io/Faras-docsify-site/#/
-
+### 样式异常2
+样式异常2
 
 # 快速开始
 
@@ -22,6 +23,10 @@
 🧩 对你来说：Docsify 就是把你的产品文档变成结构化网页的“工具箱”。
 
 # 配置
+
+## 启动index页面
+shell输入：npx docsify serve docs
+
 ## 手动运行Prettier
 在项目中，如果你希望手动运行 Prettier 来格式化 Markdown 文件，可以使用以下命令：
 ```bash
